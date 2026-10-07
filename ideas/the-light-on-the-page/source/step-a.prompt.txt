@@ -1,0 +1,22 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/user-grid-v7.png
+
+Use case: one animation keyframe for an approved 64x64 pixel-art game scene.
+
+Attached image: `user-grid-v7.png`, the approved frame. Keep everything identical - the same camera,
+the same woman in her burgundy sweater, the same sleeping orange cat, the same mug, the same deep
+blue night window, the same glowing amber bulb on its short base, the same reddish-brown desk, the
+same cream sheet, the same palette, and the same large square pixel blocks about one sixty-fourth of
+the image wide.
+
+Draw the drawing itself with deliberately THICK strokes: every pencil line must be as wide as one of
+those large pixel blocks, so it still reads after the picture is reduced to 64x64. Few lines, each
+one bold, straight and solid. Thin or broken lines are the one thing that must not happen.
+
+She has just started an architect's drawing of a building on the cream sheet: one bold horizontal
+ground line, and above it one bold tall rectangle outline for the front wall of a house. Nothing
+else is drawn yet. Her hand holds the pencil down at the LEFT side of the sheet, close to those
+first lines.
+
+No text, no letters, no numbers, no logo, no star, no hatching, no small annotations, no thin lines,
+no anti-aliased edges, no watermark.

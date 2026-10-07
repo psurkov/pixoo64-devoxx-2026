@@ -1,0 +1,19 @@
+{
+  "source": "source/key-draw-done.png",
+  "source_sha256": "f94708c7a29891cca761c868621895771736d0fd5548ac6ad6a676d575c53867",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "flatten": 0.55,
+  "sharpen": 0.3,
+  "saturation": 1.05,
+  "contrast": 1.1,
+  "colors": 64,
+  "downsample": "mode",
+  "working_colors": 48,
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

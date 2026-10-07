@@ -1,0 +1,15 @@
+{
+  "source": "source/user-base.png",
+  "source_sha256": "11e462e525884df1e5678c95886ae70fc20be4434ab40e3b62625a6f42a2be71",
+  "crop": [
+    0,
+    0,
+    1366,
+    1366
+  ],
+  "contrast": 1.15,
+  "colors": 32,
+  "downsample": "box",
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

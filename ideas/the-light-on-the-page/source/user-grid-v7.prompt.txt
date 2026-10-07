@@ -1,0 +1,27 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/user-grid-v5.png
+
+Use case: recolor an approved 64x64 pixel-art game frame.
+
+Attached image: `user-grid-v5.png`, the approved layout. Keep its composition exactly - the woman at
+the left with her pencil over a blank cream sheet, the big glowing bulb on its short base at the
+right against the dark window, the sleeping orange cat along the top edge, the mug behind the lamp,
+and the same large square pixel blocks about one sixty-fourth of the image wide. Change nothing but
+the colors.
+
+This is a night scene. Keep its warm red, orange and deep blue character, but pull the three color
+families apart so they no longer blend into one amber-brown tone:
+
+- The sweater is a clear burgundy red, distinctly redder and darker than the desk, not brown.
+- The night window behind the bulb is a deep saturated midnight blue, with a few cool slate
+  building silhouettes and small warm amber lit squares. Cool blue is the only cool color and it
+  must stay obviously blue, never teal, pale or daylit.
+- The desk is a medium reddish-brown wood, lighter than the sweater and clearly separate from it.
+- The cat stays bright orange against the blue window.
+- The sheet is a warm cream, the lightest shape in the frame after the bulb.
+- The bulb is a saturated amber glow and remains the brightest thing in the picture.
+
+Keep the room dark and the mood nocturnal, lit only by the bulb. Hold the same lightness separation
+between every shape, so each one still reads on its own at 64x64. Rich saturated night colors, not a
+daylight room, not a muted dusty palette and not a single-hue wash. No text, no logo, no star, no
+new objects, no extra detail, no anti-aliased edges, no watermark.

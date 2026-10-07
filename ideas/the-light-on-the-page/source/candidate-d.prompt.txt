@@ -1,0 +1,12 @@
+Model: gemini-nano-banana-2.1
+
+Use case: illustration-story
+Asset type: fresh first-frame concept for a 64x64 LED animation
+
+A cute, cozy lo-fi evening scene about a young engineer sketching at a desk. Square composition, camera slightly above eye level and looking down at the table from a gentle three-quarter angle. A small person in an oversized lavender hoodie sits on the LEFT, seen in three-quarter profile with a rounded face and calm focused expression. One hand holds a pencil against a cream page in the CENTER. On the page is the beginning of a simple engineering diagram: two bold circular nodes and one connecting line, plus a little set square. The page is mostly open so drawing can appear later.
+
+On the RIGHT, a clear rounded incandescent bulb stands upright in a short socket on a small stable base directly on the tabletop. Its glass silhouette is simple and clearly separated from the dark blue background. The interior is a soft, even amber glow: do not draw any filament, zigzag, wire, stripe, mark or text inside the bulb. Amber light gently illuminates the person's cheek, hand and page. The bulb and the person's drawing hand should both be recognizable when the image is reduced to 64x64 pixels.
+
+Make the composition intimate and full, like a favorite frame from a warm animated short. A dark-blue night window behind the person's head and one small mint-green plant pot make it feel lived in, while the lamp and person remain the two main focal points. Let the scene fill the square without a large empty corner.
+
+Style: genuinely cute lo-fi 2D character illustration, rounded proportions, expressive but simple face, soft matte color blocks, gentle gradients only in the light, crisp silhouette edges, no fine texture. Palette: midnight blue room, saturated cobalt tabletop, periwinkle and lavender hoodie, peach skin, warm cream page, amber bulb, tiny mint accent. Keep each material visibly different in color and brightness. No photorealism, corporate vector look, oversized blank page, suspended lamp, long arm, logos, Gemini star, readable words or watermark.

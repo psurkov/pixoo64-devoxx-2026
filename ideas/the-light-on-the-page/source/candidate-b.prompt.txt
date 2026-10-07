@@ -1,0 +1,11 @@
+Model: gemini-nano-banana-2.1
+
+Use case: stylized-concept
+Asset type: independent first-frame concept for a 64x64 LED display
+Primary request: A cozy lo-fi pixel-art engineering desk lit by one visible filament bulb.
+
+Make a square, high-angle view of the whole desk as a compact 16-bit game scene. The engineer sits at the bottom center, seen from behind, with a distinct head, shoulder and arm. The hand and pencil visibly touch a drafting sheet at center-left. On that sheet are just one bold circuit-like line and two circular nodes, with large blank areas ready for later animation. A simple dark set square rests partly on the sheet. Let the paper and person occupy the left and center, avoiding an empty left side.
+
+On the right, a freestanding exposed incandescent bulb stands in an upright socket on a small tabletop base. Show the clear pear-shaped glass against a dark navy region and a large, unmistakable warm zigzag filament within it. Its amber light forms a compact pool over the hand and sheet, while most of the tabletop stays cobalt blue.
+
+Style and medium: carefully composed pixel art with deliberate chunky pixel clusters, crisp stepped edges, a restrained 16-color feel and simple silhouettes. Dreamy lo-fi evening atmosphere. Separate dark navy clothing, medium blue table, desaturated cream paper, coral hand, pale blue glass and bright orange filament into visibly different color groups. Prioritize readability at native 64x64 size over tiny detail. One scene, one person, one lamp. No text, logos, Gemini star, hanging fixture, articulated arm, photorealism, or 3D.

@@ -1,0 +1,19 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/user-grid-v7.png
+
+Use case: one animation keyframe for an approved 64x64 pixel-art game scene.
+
+Attached image: `user-grid-v7.png`, the approved frame. This is the previous keyframe of a short
+loop. Keep everything identical - the same camera, the same woman in her burgundy sweater, the same
+sleeping orange cat, the same mug, the same deep blue night window, the same glowing amber bulb on
+its short base, the same reddish-brown desk, the same cream sheet, the same palette, and the same
+large square pixel blocks about one sixty-fourth of the image wide.
+
+Change one thing: she has started drawing. Lower her hand so the pencil tip rests on the sheet, and
+put the first marks of a simple technical diagram on the cream paper - one bold rectangle outline
+and one straight line leading away from it, drawn in dark pencil grey, each stroke thick enough to
+survive at 64x64. The marks cover only the left half of the sheet; the right half is still blank.
+
+Keep her head, hair, shoulders, the chair and every other object exactly where they are. No new
+objects, no text, no letters, no numbers, no logo, no star, no fine hatching, no small annotations,
+no extra detail, no anti-aliased edges, no watermark.

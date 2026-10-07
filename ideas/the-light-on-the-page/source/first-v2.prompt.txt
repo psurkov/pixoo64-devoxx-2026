@@ -1,0 +1,9 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/first.png
+
+Use case: precise-object-edit
+Input image: edit target, the existing first illustration of the engineer drawing.
+Primary request: Move the desk lamp to the right side and make its clear round bulb and glowing filament unmistakable.
+Preserve: The square, nearly overhead composition; the engineer's head and shoulders at the bottom; the arm and hand holding a pencil against the mostly blank drafting sheet; the short diagram line and two nodes; the set square; the elegant, simple 2D lo-fi style; the deep-blue shadows, cream paper, and cozy amber light.
+Change: Remove the shaded lamp and its light cone from the upper left. Put an exposed, spherical incandescent desk bulb in the upper-right area, attached to a simple curved dark arm coming from the right edge. Show the round glass outline clearly, with a small warm orange zigzag tungsten filament visible inside its center. Make the bulb large and distinct enough to survive downscaling to 64x64 pixels, around one fifth of the image width. Let it shine amber light onto the engineer's hand and the paper, with the left side remaining dark blue. Keep the new lamp separate from the engineer and the pencil.
+Avoid: lampshade hiding the bulb, second lamp, extra objects, new writing, text, letters, logos, Gemini star, page turn, photorealism, 3D rendering, excessive texture, watermark.

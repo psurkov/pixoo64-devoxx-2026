@@ -1,0 +1,9 @@
+Use case: illustration-story
+Asset type: independent first-frame concept for a 64x64 LED display
+Primary request: A cozy engineer beginning to draw under a freestanding incandescent bulb.
+
+Square composition with a clear visual triangle: a seated engineer seen from behind across the lower center, a large drafting sheet filling the left half, and one upright lamp on the right third of the desk. The high three-quarter camera looks down about 60 degrees, so the drawing and the bulb's full silhouette are both visible. The paper reaches near the upper-left edge; the frame is filled with useful shapes, with no large unused dark corner. One hand holds a pencil touching a simple engineering line with two nodes. The rest of the sheet is open for later drawing. A set square lies along the paper's left edge.
+
+The lamp stands directly on the dark blue tabletop: a short black socket and small round base support an exposed pear-shaped clear glass bulb. A narrow bright orange zigzag filament is visible inside the bulb. The whole bulb is on dark blue, separate from the paper, with a warm amber glow falling leftward across the engineer's hand and sheet. The glass and filament should still read at 64x64 pixels.
+
+Style and medium: clean 2D editorial illustration with elegant, simple geometric forms, distinct silhouettes, matte color blocks, and only a few soft shadows. Cozy evening mood, not a corporate poster. Limited palette: deep navy engineer, muted cobalt desk, warm gray-cream paper, terracotta hand, amber filament, pale blue glass highlights. Keep clear value and hue separation between hand, paper, bulb and background. No readable text, lettering, logos, star, suspended lamp, long arm, laptop, cup, or photorealism.

@@ -1,0 +1,11 @@
+Model: gemini-nano-banana-2.1
+
+Use case: illustration-story
+Asset type: independent first-frame concept for a 64x64 LED display
+Primary request: A quiet engineering work moment with a beautiful exposed-bulb desk light.
+
+Square image viewed from a high diagonal angle, like a frame from a hand-drawn animated film. The engineer is a readable dark silhouette at the lower left, leaning over a paper plan. One warm terracotta hand holds a pencil and draws the first straight line between two round nodes. The paper sits diagonally through the center and left, bounded by visible blue tabletop; a large set square and the engineer's arm give the scene a clear engineering purpose. Fill the left side with the person, paper and drawing gesture.
+
+On the right side of the composition, an upright incandescent bulb stands by itself in a simple short socket and broad stable base on the desk. It has a clear pear-shaped glass outline, cool blue rim highlights and a visible bright golden zigzag filament. Its entire contour is surrounded by dark blue, so the bulb remains legible as a lamp at 64x64. The warm light travels across the paper but does not bleach it white.
+
+Style and medium: richly composed but simplified 2D animation cel, broad hand-painted color planes, strong dark outlines at key edges, restrained soft glow only around the bulb. Intimate and cozy, with deep midnight blue shadows, medium blue desk, muted ivory paper, dark plum clothes, terracotta skin and gold light. Keep each object separated in color and value. Avoid texture and small details that would disappear at 64x64. No writing, logo, star, shade, curved lamp arm, dangling bulb, extra person, laptop or photographic rendering.

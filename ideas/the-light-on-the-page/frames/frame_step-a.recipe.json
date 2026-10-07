@@ -1,0 +1,19 @@
+{
+  "source": "source/step-a.png",
+  "source_sha256": "a16c7b8e8e5eb110d9fcf0e35f2b8d2d7b39383a4bc23efc62963df9b46e7b36",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "flatten": 0.55,
+  "sharpen": 0.3,
+  "saturation": 1.05,
+  "contrast": 1.1,
+  "colors": 64,
+  "downsample": "mode",
+  "working_colors": 48,
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

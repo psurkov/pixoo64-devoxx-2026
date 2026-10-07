@@ -1,0 +1,17 @@
+Use case: one animation keyframe for an approved 64x64 pixel-art game scene.
+
+Attached image: `user-grid-v7.png`, the approved frame. This is the opening keyframe of a short
+loop. Keep everything identical - the same camera, the same woman in her burgundy sweater, the same
+sleeping orange cat, the same mug, the same deep blue night window, the same glowing amber bulb on
+its short base, the same reddish-brown desk, the same cream sheet, the same palette, and the same
+large square pixel blocks about one sixty-fourth of the image wide.
+
+Change one thing: her drawing is finished. Her hand still holds the pencil down near the lower right
+of the sheet, and a simple finished technical diagram now fills the cream paper - two bold rectangle
+outlines joined by a straight line, plus one circle beside them, all in dark pencil grey. Use only
+these few large geometric marks, each thick enough to survive at 64x64, with clear empty paper
+between them.
+
+Keep her head, hair, shoulders, the chair and every other object exactly where they are. No new
+objects, no text, no letters, no numbers, no logo, no star, no fine hatching, no small annotations,
+no extra detail, no anti-aliased edges, no watermark.

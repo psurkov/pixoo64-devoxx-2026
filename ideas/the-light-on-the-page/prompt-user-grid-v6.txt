@@ -1,0 +1,22 @@
+Use case: recolor an approved 64x64 pixel-art game frame.
+
+First attached image: `user-grid-v5.png`, the approved layout. Keep its composition exactly - the
+woman at the left with her pencil over a blank cream sheet, the big glowing bulb on its short base
+at the right against the dark window, the sleeping orange cat along the top edge, the mug behind the
+lamp, and the same large square pixel blocks about one sixty-fourth of the image wide.
+
+Second attached image: a lo-fi illustration supplied as a color reference only. Ignore its subject,
+daylight, camera and props. Take its palette: muted dusty earth tones with real hue variety rather
+than one brown tone. Pale teal `#BADDD8`, warm cream `#CCB69B`, terracotta `#C68A66`, muted olive
+`#967D5B`, burnt orange `#AC4E2A`, deep forest green `#2C3A2B`, brick red `#7D2622` and soft dark
+brown `#35231C`.
+
+Recolor the approved frame in that spirit. The sweater becomes deep forest green, the chair back
+brick red, the desk muted terracotta, the sheet warm cream, and the night window a desaturated
+teal-slate instead of saturated blue, with its lit squares a soft muted cream. Keep the cat burnt
+orange. The glowing bulb stays the one saturated, bright warm element, so it still reads as the
+brightest thing in the frame. Hold the same lightness separation between every shape.
+
+Calm, muted, slightly dusty colors - a cozy lo-fi film still at night, not a high-contrast neon
+scene. Change nothing but the colors. No text, no logo, no star, no new objects, no extra detail, no
+anti-aliased edges, no watermark.

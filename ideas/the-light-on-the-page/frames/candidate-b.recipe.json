@@ -1,0 +1,15 @@
+{
+  "source": "source/candidate-b.png",
+  "source_sha256": "ea5a5228c87cb5254646605eb7c9b9696842899aeb1eeaa463e947027088f095",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "contrast": 1.15,
+  "colors": 32,
+  "downsample": "box",
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

@@ -1,0 +1,15 @@
+{
+  "source": "source/user-base-lamp-v3.png",
+  "source_sha256": "8837caa49a50f46b9716b417a45273d43f8902bced0afcff4354367b774324b7",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "contrast": 1.15,
+  "colors": 32,
+  "downsample": "box",
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

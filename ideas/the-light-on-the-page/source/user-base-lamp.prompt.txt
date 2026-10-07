@@ -1,0 +1,11 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/user-base.png
+
+Use case: precise-object-edit
+Input image: the user-selected square lo-fi pixel-art scene. This is the exact edit target.
+
+Change only the lamp on the RIGHT. Remove its orange metal shade, hinge and articulated arm. In its place, put one freestanding exposed incandescent bulb on the right side of the desk: a clear rounded pear-shaped glass globe in a short dark socket on a small stable round base resting directly on the wood tabletop. The warm bulb occupies roughly the same right-hand area without covering the cat, paper, girl's face or coffee. Its amber light continues to illuminate the blank page and nearby desk. Show a simple smooth glow inside the bulb with no drawn filament, wire, zigzag, line, letters or symbol.
+
+Preserve the rest of the image as faithfully as possible: the beautiful woman at left with dark hair and burgundy sweater, her pencil hovering over the completely blank cream page, the large orange sleeping cat above it, the window with a blue evening city, plants, books, steaming coffee mug, warm wooden desk, rich reddish and deep-blue colors, and the exact cozy lo-fi pixel-art style. Keep the original square framing, object positions, scale, pixel-like edges and light direction. Restore the window and room background revealed when the old lamp arm disappears.
+
+The result is still a single first frame for a 64x64 LED artwork, so the girl, cat, clear standing bulb, blank page and coffee must remain identifiable when reduced. No additional objects, writing, diagrams, logos, Gemini star, second lamp, photorealism, smooth vector redraw or watermark.

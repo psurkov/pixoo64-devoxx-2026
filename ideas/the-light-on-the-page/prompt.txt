@@ -1,0 +1,8 @@
+Use case: illustration-story
+Asset type: first static source image for a 64x64 LED artwork
+Primary request: A cozy lo-fi illustration of an engineer just beginning to draw a technical diagram under a desk lamp.
+Scene and composition: Square image, nearly straight overhead view. A large warm-cream sheet of drafting paper fills the center and right of the frame. At the bottom edge, clearly show the seated engineer's head and shoulders, one arm, and a hand holding a graphite pencil. The pencil tip touches the paper beside one short dark line and two clear circular nodes; most of the sheet is still blank. A simple set square lies near the edge of the sheet. A small incandescent desk lamp sits in the upper left and has just switched on, casting a focused amber pool of light onto the engineer's hand and the paper.
+Style: Elegant 2D illustrated lo-fi scene with bold, simple silhouettes and large clean color areas. Designed to remain understandable when reduced to 64x64 pixels and 32 colors. Distinct shapes, crisp edges, minimal tiny detail.
+Color and mood: Quiet, warm, absorbed in work. Deep navy and dark blue desk shadows inspired by Gemini 4 Argon artwork; amber lamp light; cream paper; dark graphite drawing.
+Constraints: The engineer must visibly be the person drawing. The lamp, paper, pencil, hand, and top-down silhouette of the person's head and shoulders must be recognizable at thumbnail size. Keep a fixed overhead composition suitable for later animation.
+Avoid: text, letters, logos, Gemini star, finished dense diagram, page turn, extra people, laptop, cup, UI, split panels, photorealism, 3D rendering, excessive texture, watermark.

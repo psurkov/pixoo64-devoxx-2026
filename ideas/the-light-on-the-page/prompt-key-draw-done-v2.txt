@@ -1,0 +1,25 @@
+Use case: one animation keyframe for an approved 64x64 pixel-art game scene.
+
+Attached image: `user-grid-v7.png`, the approved frame. Keep everything identical - the same camera,
+the same woman in her burgundy sweater, the same sleeping orange cat, the same mug, the same deep
+blue night window, the same glowing amber bulb on its short base, the same reddish-brown desk, the
+same cream sheet, the same palette, and the same large square pixel blocks about one sixty-fourth of
+the image wide.
+
+Change one thing: her engineering diagram is finished and fills the cream sheet. Draw it in dark
+pencil grey as two connected parts:
+
+- On the left two thirds, a system architecture tree: one rectangle box at the top, two straight
+  arrow lines running down from it to two rectangle boxes side by side below, and one short arrow
+  joining those two boxes. Give every arrow a small clear arrowhead.
+- On the right third, a small line graph: one vertical axis, one horizontal axis, and a single line
+  rising in two steps above them.
+
+This must read as a deliberate technical drawing - an architecture diagram with a measurement graph
+beside it, the kind of thing an engineer sketches - not as random abstract shapes. Keep every stroke
+thick and straight enough to survive at 64x64, keep the boxes clearly rectangular, and leave clean
+empty paper between the parts.
+
+Keep her hand holding the pencil down on the paper, and keep her head, hair, shoulders, the chair
+and every other object exactly where they are. No text, no letters, no numbers, no logo, no star, no
+hatching, no small annotations, no extra detail, no anti-aliased edges, no watermark.

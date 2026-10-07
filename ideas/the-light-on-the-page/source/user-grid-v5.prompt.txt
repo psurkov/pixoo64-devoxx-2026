@@ -1,0 +1,21 @@
+Model: gemini-nano-banana-2.1
+Reference image: source/user-base-lamp-v2.png
+
+A 2D game scene: pixel art made for a 64x64 LED display.
+
+A cozy desk at night. A young woman sits at the left in a burgundy sweater, her face in profile and
+lit warmly, a pencil hovering over a small completely blank cream sheet. A big glowing amber bulb on
+a short round base stands on the right half of the desk and fills about a quarter of the frame
+height; the dark window sits directly behind it so its round glass has a clear silhouette. A
+sleeping orange cat curls along the top edge. A small mug sits farther back beside the lamp. The
+window is flat deep navy with three plain building silhouettes and four amber window squares.
+
+Draw this on a 64x64 grid using large square pixel blocks, each about one sixty-fourth of the image
+wide. Six shapes carry the picture - woman, sheet, bulb, cat, mug, window - and everything else
+stays dark and quiet. Separate every shape by lightness rather than by an outline. The bulb is the
+brightest thing in the frame and a visible filament line inside it is welcome. Rich warm colors
+against the blue night.
+
+The attached image is a layout and color reference only. Keep its positions and its palette, but
+draw far fewer and much larger shapes. No text, no logo, no star, no second light, no fine texture,
+no hair strands, no wood grain, no anti-aliased edges, no photorealism, no watermark.

@@ -1,0 +1,19 @@
+{
+  "source": "source/key-draw-mid-v2.png",
+  "source_sha256": "8748a8a60e96dfd174da86aa6ec82c798b3240ad3d8c0323e012af83d0f99deb",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "flatten": 0.55,
+  "sharpen": 0.3,
+  "saturation": 1.05,
+  "contrast": 1.1,
+  "colors": 64,
+  "downsample": "mode",
+  "working_colors": 48,
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

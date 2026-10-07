@@ -1,0 +1,12 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/user-base-lamp.png
+
+Use case: precise image edit for a 64x64 LED artwork
+Input image: the current square lo-fi pixel-art scene `user-base-lamp.png`. Preserve its girl, sleeping orange cat, completely blank page, books, plants, coffee, warm wood desk, evening mood, and rich pixel-art colors.
+
+Make two composition changes while keeping the rest of this image as close as possible to the input:
+
+1. Swap the visual positions of the lamp and the coffee. Move the freestanding bulb lamp into the lower-right foreground area where the large coffee mug now sits. Make the bulb about twice its current size so it is one of the first shapes noticed at 64x64. Its compact base rests directly on the wooden desk; its warm glass globe is distinct from the cream paper and does not cover the girl's hand. Move the coffee mug to the smaller, farther-back right-side spot previously occupied by the lamp. The coffee becomes a secondary prop. A visible filament line inside the bulb is acceptable.
+2. Simplify the window and the area around it. Keep a recognizable blue night city, but depict it using three or four broad dark building silhouettes and only a few large amber window squares. Remove the many tiny lit windows, dots, stars and small architectural marks. Simplify nearby books and plants into a few bigger readable shapes. The sleeping orange cat stays clear and prominent.
+
+Keep the girl's pose, dark hair, burgundy sweater, hovering pencil and fully blank sheet. Preserve the warm lo-fi pixel-art look, thick readable color masses, and contrast between dark blue night, reddish-brown room, orange cat and gold lamp. The lamp should cast warm light over the paper from its new lower-right position. Compose for native 64x64 readability: large distinct forms and quiet background, with no extra detail, new text, diagram, logo, star, second light, photorealism or smooth vector redraw.

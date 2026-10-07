@@ -1,0 +1,15 @@
+{
+  "source": "source/first-v2.png",
+  "source_sha256": "b54bda160dbb0c858b6319be2c55352e5732721282add033a28f44959ea3a1a2",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "contrast": 1.15,
+  "colors": 32,
+  "downsample": "box",
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

@@ -1,0 +1,19 @@
+{
+  "source": "source/user-grid-v7.png",
+  "source_sha256": "21d2ca1d02a36e2348f6b36ef37ba73ee07ce32af3fd904234ec2624c596a0c5",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "flatten": 0.55,
+  "sharpen": 0.3,
+  "saturation": 1.05,
+  "contrast": 1.1,
+  "colors": 64,
+  "downsample": "mode",
+  "working_colors": 48,
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

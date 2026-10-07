@@ -1,0 +1,11 @@
+Model: gemini-nano-banana-2.1
+Reference image: source/user-base-lamp-v2.png
+
+Use case: illustration-story from a composition reference
+Input image: the selected lo-fi room scene with the woman on the left, blank page in the center, orange cat above, large freestanding bulb at lower right, and small coffee mug behind it. Use this image as the exact layout and color-mood reference. Redraw it as a new simpler illustration rather than copying its tiny pixel details.
+
+Create one square first frame that is visually clear at 64x64 pixels. Preserve the five large visual masses and their positions: woman's head and burgundy sweater at left, large untouched cream sheet in the center, curled orange cat along the upper edge, glowing amber bulb on its short tabletop base at lower right, and small coffee mug farther back at right. Her pencil hovers over a completely blank page. The window stays dark blue behind the cat. The lamp remains the strongest light source.
+
+Use a cute, calm lo-fi animated-film style with soft matte edges, broad simple shapes and gentle warm light. Keep the rich burgundy, orange, honey gold, warm wood, cream, and midnight-blue palette of the reference. Give each main object its own clear silhouette and color value. Draw the girl's hair as one dark mass with one broad highlight, the cat as one curled orange mass with ears and closed eyes, the lamp as one bright glass globe plus a simple base, and the page as one clean pale shape. Keep the coffee secondary.
+
+Quiet the background: a flat deep-blue window with two or three broad building silhouettes and only three or four amber windows. Plants become a couple of large leaf shapes and books become simple blocks. Remove little stars, tiny window panes, thin hair strands, small leaf veins, wood grain, dense outlining and texture. Allow only a soft halo around the bulb; the rest of the image uses smooth restrained shading. Think of an elegant lo-fi illustration painted for a tiny display, not a detailed poster shrunk down and not a crunchy pixel filter. No writing or marks on the page, extra objects, logos, Gemini star, photorealism or watermark.

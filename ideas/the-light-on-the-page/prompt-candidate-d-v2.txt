@@ -1,0 +1,10 @@
+Use case: precise-object-edit
+Input image: the cute lo-fi scene with a person in a lavender hoodie, blue desk, warm round bulb at right, open notebook, plants and night window. Use it as the edit target.
+
+Preserve the appealing square composition, rounded 2D animation style, cobalt and lavender colors, warm amber desk bulb on its small base at the right, night window, small plants, blue tabletop, and the feeling of a calm evening. Keep the bulb a plain soft glow with no filament, line, zigzag, letter, or symbol inside it.
+
+Make the person clearly a beautiful young adult woman with softly styled shoulder-length dark hair, a gentle focused expression, and the same oversized lavender hoodie. Keep her seated at the desk and visibly holding a pencil ready to work. Her pencil tip hovers just above the paper rather than making a mark.
+
+Make both visible notebook pages completely clean and blank: no circles, lines, dots, sketches, text, or diagrams of any kind. Remove the drafting triangle next to her and any other rulers or loose pens at the bottom right. Put one distinct, cozy coral ceramic mug of coffee on the tabletop near the lower right of the lamp, so it does not blend into the blue desk. The mug must read as a cup at 64x64 pixels, with a simple handle and a little steam.
+
+Keep the girl, clean notebook, glowing lamp, and coffee mug as the four clear shapes at native 64x64 size. Use enough color contrast to separate her peach face and hand from the cream paper and amber light. No new objects, logos, star, readable text, photorealism, or corporate vector styling.
