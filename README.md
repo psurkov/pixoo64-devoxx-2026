@@ -62,9 +62,17 @@ Turn the source into the actual 64×64 candidate and an 8× review copy:
 java -jar artwork-tool/target/artwork-tool-0.1.0-all.jar inspect ideas/the-light-on-the-page/frames/frame_001.png
 ```
 
-The frame tool center-crops to a square, raises contrast, reduces to a 32-color palette, and downsamples to 64×64. Use `--crop LEFT TOP RIGHT BOTTOM`, `--contrast`, and `--colors` to tune the result. It writes the exact settings and source SHA-256 in the frame's recipe file. The review copy is enlarged using nearest-neighbor scaling, so it shows the real pixels without smoothing. **Show both the 64×64 frame and its review copy to the user. Wait for approval before creating other images or a GIF.**
+Before preparing a frame, measure how much detail the source actually carries:
 
-Compose a looping GIF with Jixoo's encoder. The final argument is each frame's display time in milliseconds:
+```sh
+.venv/bin/python scripts/inspect_source.py ideas/the-light-on-the-page/source/first.png
+```
+
+A source that reports far more than 64 logical pixels needs a simpler drawing, not a different resize filter. See [docs/pixel-art-for-64x64.md](docs/pixel-art-for-64x64.md).
+
+The frame tool center-crops to a square, flattens fine texture to the locally dominant color, gives each output pixel the color covering most of its cell, and quantizes to 64 colors without dithering. Use `--crop LEFT TOP RIGHT BOTTOM`, `--flatten`, `--sharpen`, `--contrast`, `--saturation`, and `--colors` to tune the result, and `--downsample box` for the older, softer averaging export. It writes the exact settings and source SHA-256 in the frame's recipe file. The review copy is enlarged using nearest-neighbor scaling, so it shows the real pixels without smoothing. **Show both the 64×64 frame and its review copy to the user. Wait for approval before creating other images or a GIF.**
+
+Compose a looping GIF with Jixoo's encoder. The final argument is the default display time per frame in milliseconds; a frame named like `frame_07_600ms.png` uses its own delay instead:
 
 ```sh
 java -jar artwork-tool/target/artwork-tool-0.1.0-all.jar compose ideas/the-light-on-the-page/frames ideas/the-light-on-the-page/final/entry.gif 100

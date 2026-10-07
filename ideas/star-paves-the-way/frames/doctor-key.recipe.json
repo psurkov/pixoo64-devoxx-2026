@@ -1,0 +1,15 @@
+{
+  "source": "source/doctor-key.png",
+  "source_sha256": "5f514f50a7cdf246d8611002b118b1869f886f7def2f87174296048595ff37a0",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "contrast": 1.15,
+  "colors": 32,
+  "downsample": "box",
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

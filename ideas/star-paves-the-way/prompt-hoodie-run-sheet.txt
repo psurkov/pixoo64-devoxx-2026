@@ -1,0 +1,5 @@
+Image 1 is a 2x2 running-cycle sprite sheet to edit. Image 2 is a costume reference only; ignore its background, road, star, and pose.
+
+Edit image 1 by changing only the runner's clothing in all four cells: replace the white medical coat, stethoscope, and cross with the plain light-gray hoodie from image 2, matching its grayscale colors, hood, folds, and shading. Keep the dark gray trousers and gray shoes. Keep exactly the same four running poses, leg and arm positions, body proportions, face, hair, position, and scale in every cell. Keep the bold black pixel outlines and chunky pixel clusters. The whole character stays grayscale.
+
+Keep the flat solid pure magenta (#FF00FF) background in every cell, with no gradients, borders, shadows, ground, scenery, text, or watermark. The character must contain no magenta.

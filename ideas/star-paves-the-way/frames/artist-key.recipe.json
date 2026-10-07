@@ -1,0 +1,15 @@
+{
+  "source": "source/artist-key.png",
+  "source_sha256": "6ae4990804873a335d1c981c1220b092083b23e88512df5fec08b1437fe400b5",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "contrast": 1.15,
+  "colors": 32,
+  "downsample": "box",
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

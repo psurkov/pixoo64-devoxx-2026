@@ -1,0 +1,8 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/first-v3.png
+
+Edit the supplied image as one keyframe of the same polished pixel-art animation. Keep the exact side-view composition, the same young man's face and dark hair, bold pixel clusters, pale grayscale mountains, cyan-to-violet glow, low-flying four-point star, and one continuous luminous road ending at the star. Preserve the image's visual richness and shading. Do not redesign the character or simplify the art into basic shapes.
+
+Turn the runner into a doctor while he keeps running without stopping. Replace his hoodie with a clearly readable long white medical coat over dark trousers. Add a visible stethoscope around his neck and a small medical cross on the coat chest. The coat tails may stream backward with his motion. Give him an alternate running stride: his front knee is raised and his rear foot is pushing off. Keep his face and body proportions consistent with the supplied image.
+
+Keep the world mostly black and white at this early moment; the four-point star and a short stretch of newly drawn road are the main cyan and violet color accents. Place a simple medical cross shape in the distant background only if it stays subordinate to the runner and star. No badges, floating reward icons, tiled path, text, watermark, borders, or UI. All important details must survive reduction to 64x64 pixels.

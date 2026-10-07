@@ -13,11 +13,15 @@ import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class ArtworkTool {
     private static final int SIZE = 64;
     private static final int MAX_FRAMES = 30;
     private static final long MAX_FILE_BYTES = 5L * 1024 * 1024;
+    // A frame named like frame_07_600ms.png overrides the default delay.
+    private static final Pattern FRAME_DELAY = Pattern.compile("_(\\d+)ms\\.png$", Pattern.CASE_INSENSITIVE);
 
     private ArtworkTool() {}
 
@@ -27,7 +31,7 @@ public final class ArtworkTool {
         } else if (args.length == 2 && args[0].equals("inspect")) {
             inspect(Path.of(args[1]));
         } else {
-            System.err.println("Usage: compose <frames-dir> <output.gif> <delay-ms> | inspect <image.png|animation.gif>");
+            System.err.println("Usage: compose <frames-dir> <output.gif> <default-delay-ms> | inspect <image.png|animation.gif>");
             System.exit(2);
         }
     }
@@ -52,7 +56,7 @@ public final class ArtworkTool {
             try {
                 BufferedImage image = ImageIO.read(path.toFile());
                 requireSize(image, path);
-                return PixooFrame.fromImage(image, delayMs);
+                return PixooFrame.fromImage(image, frameDelay(path, delayMs));
             } catch (IOException e) {
                 throw new IllegalStateException("Cannot read " + path, e);
             }
@@ -66,6 +70,16 @@ public final class ArtworkTool {
         if (parent != null) Files.createDirectories(parent);
         Files.write(output, gif);
         inspect(output);
+    }
+
+    private static int frameDelay(Path path, int defaultMs) {
+        Matcher matcher = FRAME_DELAY.matcher(path.getFileName().toString());
+        if (!matcher.find()) return defaultMs;
+        int delayMs = Integer.parseInt(matcher.group(1));
+        if (delayMs < 10 || delayMs % 10 != 0) {
+            throw new IllegalArgumentException(path + ": frame delay must be a positive multiple of 10 ms");
+        }
+        return delayMs;
     }
 
     private static void inspect(Path file) throws IOException {

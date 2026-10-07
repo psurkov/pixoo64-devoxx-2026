@@ -1,0 +1,15 @@
+{
+  "source": "source/coder-key.png",
+  "source_sha256": "42ff281be20ba81dfe5502f2291267711a23635115ac4f0f93f5a10594ff88b5",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "contrast": 1.15,
+  "colors": 32,
+  "downsample": "box",
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

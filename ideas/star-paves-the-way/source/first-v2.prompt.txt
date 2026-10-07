@@ -1,0 +1,12 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/first.png
+
+Edit the supplied image, which is the first-frame source for a 64x64 pixel-art animation. Keep its side-view runner, grayscale world turning cyan and violet, clean pixel-art style, and hopeful sense of forward motion. Change the composition and the way the road forms.
+
+Make the runner moderately smaller, roughly one third of the image height, while keeping his full-body running silhouette and dark outline easy to read after reduction to 64x64. Keep him left of center with clear space around his arms and legs.
+
+Move the same four-point star down to ground level, just ahead of his leading foot and almost beneath him, about one runner step away. It must visibly draw the ground as it flies forward: a single continuous luminous path extends backward from the star under both feet and toward the left edge. The path is a clean, solid cyan-blue ribbon with enough thickness to remain visible at 64x64, not a hairline or a beam floating in the air. Its leading edge touches the star; the ground ahead of the star is empty. Use a small bright flare at the exact contact point where the path is being created.
+
+Remove all rectangular tiles, gaps between slabs, grids, stepping stones, and segmented platforms. Behind the runner, the completed path and world remain mostly grayscale. The newly drawn section near the star carries cyan, royal blue, and a little violet, with color beginning to spread into the nearby landscape. Keep the rest of the background simple and subordinate.
+
+Maintain deliberate large pixel clusters, hard edges, a limited palette, and distinct silhouettes. No achievements or collectible icons in this first frame. No text, letters, numbers, logos, watermark, border, or UI. The main visual story at thumbnail size must be: the small runner follows a low-flying star that is drawing his road continuously.

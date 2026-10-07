@@ -1,0 +1,9 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/doctor-run-sheet.png
+Reference image: source/coder-key.png
+
+Image 1 is a 2x2 running-cycle sprite sheet to edit. Image 2 is a costume reference only; ignore its background, road, star, and pose.
+
+Edit image 1 by changing only the runner's clothing in all four cells: replace the white medical coat, stethoscope, and cross with the deep-blue hoodie and dark headphones from image 2, matching its colors, folds, and shading. Keep the dark gray trousers and shoes. Keep exactly the same four running poses, leg and arm positions, body proportions, face, hair, position, and scale in every cell. Keep the bold black pixel outlines and chunky pixel clusters.
+
+Keep the flat solid pure magenta (#FF00FF) background in every cell, with no gradients, borders, shadows, ground, scenery, text, or watermark. The character must contain no magenta.

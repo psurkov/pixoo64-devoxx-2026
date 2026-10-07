@@ -1,0 +1,12 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/first-v2.png
+
+Edit the supplied pixel-art image. This is a correction of its composition, not a new scene. Preserve the grayscale-to-cyan-violet palette, side view, running pose, single four-point star, continuous luminous road, simple mountain backdrop, and hard pixel-art shapes.
+
+The current image still has two specific problems: the runner is too large, and the star is much too far from his foot. Correct both visibly.
+
+Resize the entire runner to about 70% of his current height and width, including his head, arms, legs, and clothing. Keep him recognizable and running on the road in the left half of the square, with his front foot touching the road. Do not merely change the camera crop or add empty space around an unchanged runner. The finished runner should occupy approximately 35-40% of the image height rather than over half.
+
+Move the four-point star left to almost under his leading foot: its center is only about one star-width ahead of his front toe, close to road level. At 64x64 output, only about 3-5 pixels of horizontal space should separate toe and star. The star travels just ahead of him and draws a single continuous, solid cyan-blue road behind it. The road ends exactly at the star; everything in front of the star has no road. Keep a tiny bright drawing spark where the star meets the road. Do not add a second star or any loose platform tile.
+
+Keep the background subdued so runner, low star, and road read clearly at 64x64. No segmented tiles, grids, panels, collectible icons, achievement badges, text, logos, border, or UI.

@@ -1,0 +1,12 @@
+The supplied image is a character and style reference only. Do not copy its composition, background, road, or star. Copy the runner's identity and art style exactly: the same young man with dark messy hair, the same face, long white medical coat with a stethoscope and small cross on the chest, dark gray trousers, gray shoes, bold black pixel outlines, chunky pixel clusters, and soft grayscale shading.
+
+Draw a running-cycle sprite sheet of this doctor as a 2x2 grid of four equal square cells. In every cell, show the whole doctor in strict side view running to the right, at exactly the same scale, with his head at the same height and his feet on the same invisible ground line in the lower part of the cell. The figure fills about two thirds of the cell height and stays centered with empty margin on all sides. Cells do not touch or overlap.
+
+The four cells are four clearly different phases of one fast sprint, read left to right, top to bottom:
+1. Top left, contact: the front leg reaches forward and the front heel touches the ground; the rear leg extends behind; the opposite arm swings forward.
+2. Top right, push-off: the body is lowest; the rear leg pushes hard off the ground; the front knee bends under the body.
+3. Bottom left, flight: both feet are off the ground; the front knee is raised high and forward; the rear leg trails back with its heel kicked up; arms strongly bent and swinging opposite to the legs; the coat tails stream backward.
+4. Bottom right, passing: one foot is planted under the hips; the other leg swings forward, its knee passing the supporting leg; arms pass near the body.
+Legs and arms must be visibly different in every cell. Keep the coat, face, and proportions identical across all cells.
+
+Fill the entire background of every cell with one flat solid pure magenta color (#FF00FF), with no gradients, grid lines, borders, shadows, ground, road, star, glow, scenery, text, labels, numbers, or watermark. The character itself must contain no magenta. Every important detail must survive reduction of the figure to about 30 pixels tall.
