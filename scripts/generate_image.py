@@ -11,12 +11,16 @@ from PIL import Image
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("prompt_file", type=Path)
-    parser.add_argument("output", type=Path)
+    parser.add_argument("idea_dir", type=Path)
+    parser.add_argument("--name", default="first")
     parser.add_argument("--model", default="gemini-nano-banana-2.1")
     args = parser.parse_args()
 
-    prompt = args.prompt_file.read_text(encoding="utf-8")
+    prompt = (args.idea_dir / "prompt.txt").read_text(encoding="utf-8")
+    output = args.idea_dir / "source" / f"{args.name}.png"
+    if output.exists():
+        raise FileExistsError(f"Source image already exists: {output}")
+
     client = genai.Client()
     try:
         response = client.models.generate_content(
@@ -34,10 +38,13 @@ def main() -> None:
     if image_part is None:
         raise RuntimeError("The model returned no image")
 
-    args.output.parent.mkdir(parents=True, exist_ok=True)
+    output.parent.mkdir(parents=True, exist_ok=True)
     with Image.open(BytesIO(image_part.inline_data.data)) as image:
-        image.save(args.output, format="PNG")
-    print(f"Saved {args.output}")
+        image.save(output, format="PNG")
+    (output.parent / f"{args.name}.prompt.txt").write_text(
+        f"Model: {args.model}\n\n{prompt}", encoding="utf-8"
+    )
+    print(f"Saved {output}")
 
 
 if __name__ == "__main__":

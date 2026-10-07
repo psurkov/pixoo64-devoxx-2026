@@ -2,6 +2,8 @@
 
 Text concepts for the Devoxx Belgium Pixoo 64 contest. Each idea has its own folder and describes one proposed first static frame. No images have been generated.
 
+After an idea is selected, its folder will also hold `prompt.txt`, `source/` for model output and the exact prompt used, `frames/` for native 64×64 PNGs and processing recipes, `review/` for enlarged pixel previews, and `final/` for submission files. Manual changes, revisions, and approval decisions belong in that idea's `README.md`. See the [workflow](../README.md#artwork-workflow).
+
 | Idea | First-frame hook | Main connection to Gemini 4 Argon |
 | --- | --- | --- |
 | [Bugs Ar Gone](bugs-ar-gone/README.md) | A glowing `Ar` core stops a red pixel bug | Cyber defense and automated patching |
