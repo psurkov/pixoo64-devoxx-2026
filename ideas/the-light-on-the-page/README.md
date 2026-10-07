@@ -82,49 +82,57 @@ export for comparison. The techniques behind this are recorded in
 ## Animation prototype
 
 Authorized after the user approved `user-grid-v7.png`. Built by `build_light_gif.py` into
-`animation_frames/`, `review/prototype.gif` (64×64, 23 frames, 300 ms each, 6.9 s, 30 KB) and
+`animation_frames/`, `review/prototype.gif` (64×64, 23 frames, 300 ms each, 6.9 s, 42 KB) and
 `review/prototype-8x.gif`, with `review/prototype-contact-sheet.png` showing every frame at once.
 
 ### The loop
 
 1. The room is dark; the lamp comes up over a blank sheet.
-2. She draws an architect's note on the paper, stroke by stroke: ground line and height dimension
-   first, then the elevation, its roof and bay divisions, the floor lines and ground hatch, a small
-   plan view, and finally the dimension end ticks and a scale bar.
+2. She works through a piece of mathematics. Her hand moves across the sheet and a protractor
+   appears beside it, while the page fills in three passes: an integral sign with its axes, then
+   the curve and the shaded area underneath it, then a summation, an equals sign and a quotient.
+   Between her strokes the lamp flares violet, so it reads as helping her.
 3. The room sinks into shadow while the lamp keeps burning.
-4. The lamp steps forward and fills the frame, so what is inside the glass can be read: a pale blue
-   `Ar` appears in the envelope, the argon that protects the filament.
-5. The glass turns blue-violet and resolves into the four-point Gemini star, which fades as the warm
-   lamp switches on again over a fresh sheet.
+4. The camera pushes in on the lamp itself, cropped from the full-resolution source, until the
+   glass fills the frame. A pale blue `Ar` appears inside it: the argon that protects the filament.
+5. The glass turns blue-violet and the four-point Gemini star breaks out of it, then fades as the
+   warm lamp switches on again over a fresh sheet.
 
 ### What the model drew and what code drew
 
-Two keyframes were generated for the drawing pose - `key-draw-mid.png` and `key-draw-done.png` from
-their prompt files - then `key-draw-mid-v2.png` and `key-draw-done-v2.png` after the user asked for
-a real engineering drawing instead of abstract shapes. All four failed the same way: the model
-renders thin technical linework as scattered speckle once the image comes down to 64×64. They are
-kept as a record of that limit.
+The room is the model's. So is the moving hand and the protractor, from `step-a.png`,
+`step-b-v2.png` and `step-c-v2.png` - pose changes only a new generation can give. Code composites
+them: only the sheet region of each keyframe below row 39, plus the strip of desk where the
+protractor lands and never the bulb or its halo, is pasted onto the approved plate. Without that
+mask the hair, cat, window and mug drift between generations and the loop jitters.
 
-Everything moving is therefore composited in code on the approved plate, which is also what keeps
-the hair, cat, window and lamp from jittering between frames:
+The work on the paper is drawn in code, above row 39, after six generations established that the
+model cannot hold thin linework at this size. `prompt-key-draw-mid` and `prompt-key-draw-done`
+asked for a diagram and returned scattered speckle; their `-v2` pair asked for an architecture
+diagram and returned the same. `step-a` asked for two bold shapes with every stroke as wide as one
+display pixel and came back clean, but `step-b-v2` with three and `step-c-v2` with four came back
+crooked, with the protractor as a spiral. The model holds about two bold shapes here and no more.
+`DRAWING_SOURCE = "model"` puts its own drawing back on the sheet for comparison.
 
-- the lamp turning on and the fade to shadow are blends toward night blue, with the bulb and its
-  halo held at their own brightness;
-- the architect's note is drawn with straight one-pixel strokes in two weights, pencil grey for the
-  building and a lighter draft grey for the construction lines, dimensions and hatch. A first
-  attempt at a box-and-arrow architecture diagram was rejected as abstract, and a second attempt
-  drawn as a towered castle was rejected as childish; the present elevation with its height
-  dimension, bay grid, hatched ground, plan view and scale bar reads as drafting;
-- the argon reveal enlarges the bulb to fill the frame before naming the gas. Inside the
-  13-pixel bulb of the still frame no lettering is legible, which is why the earlier small `Ar`
-  could not be read. The large `Ar` is drawn by hand and is the only lettering in the loop;
-- the Gemini star is a tapered polygon filled with a blue-to-violet gradient, growing out of the
-  glass that just held the `Ar`.
+The user rejected a box-and-arrow architecture diagram as abstract, a towered castle as childish,
+and the model's own crooked house, and asked for serious mathematics instead. The glyphs are
+plotted pixel by pixel because nothing smaller reads: the integral is eight pixels, the summation a
+four-by-five block, and the area under the curve is hatched in the lighter draft grey so it stays
+separate from the curve itself.
+
+The rest is code: the lamp turning on and the fade to shadow are blends toward night blue with the
+bulb held at its own brightness; the violet flare screens a bright violet over the halo ring only,
+because tinting the glass itself turns the amber core to mauve and the lamp stops looking lit; the
+zoom crops the 1024-pixel source around the bulb through the same flatten-and-dominant-color
+pipeline as the stills, so it is the same lamp growing rather than a cut to a redrawn one; the `Ar`
+is placed by hand and scaled to the glass; and the star is a tapered polygon under a blue-to-violet
+gradient, laid over the violet glass first so it emerges from it.
 
 ### Prototype review
 
 Watch the loop at both sizes. It succeeds if the lamp switching on reads as a reveal, the sheet
-reads as an architect's working note while it is drawn, the `Ar` is unmistakable inside the glass,
-and the star's four points stay sharp at native size. Known rough edge: the dimmed frames
-desaturate the warm room toward grey-blue, which is a linear blend rather than a lighting pass.
-Animation refinements and any final export still need separate approval.
+reads as real mathematics while it is written, the violet flare reads as the lamp helping, the
+push-in stays on the same lamp, the `Ar` is unmistakable inside the glass, and the star's four
+points stay sharp at native size. Known rough edge: the dimmed frames desaturate the warm room
+toward grey-blue, which is a linear blend rather than a lighting pass. Animation refinements and
+any final export still need separate approval.

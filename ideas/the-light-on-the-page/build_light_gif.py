@@ -9,7 +9,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-from PIL import Image, ImageDraw, ImageFilter, ImageSequence
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageSequence
 
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parents[1]
@@ -26,11 +26,19 @@ NIGHT = (4, 9, 24)
 ARGON = (190, 234, 255)
 STAR_TOP = (53, 99, 244)
 STAR_BOTTOM = (152, 135, 244)
-HELPER_VIOLET = (150, 120, 246)
+HELPER_VIOLET = (118, 92, 248)
 
 PLATE = "frame_user-grid-v7"
 DRAWING_STEPS = ("frame_step-a", "frame_step-b-v2", "frame_step-c-v2")
 SOURCE_IMAGE = "user-grid-v7.png"
+# The maths on the sheet is drawn in code and the moving hand comes from the model keyframes, which
+# only touch the paper below row 39. The model cannot hold thin linework at this size: six
+# generations turned integrals and diagrams alike into speckle. Set DRAWING_SOURCE = "model" to put
+# its own drawing back on the sheet instead.
+DRAWING_SOURCE = "code"
+HAND_ROW = 39
+PENCIL = (59, 50, 46)
+DRAFT = (120, 104, 96)
 
 BULB_CENTER = (54, 42)
 BULB_RADIUS = 7
@@ -70,11 +78,77 @@ def paper_region() -> Image.Image:
         outside = Image.new("L", (SIZE, SIZE))
         ImageDraw.Draw(outside).rectangle(corner, fill=255)
         region = Image.composite(region, Image.new("L", (SIZE, SIZE)), outside)
+    draw = ImageDraw.Draw(region)
+    if DRAWING_SOURCE == "code":
+        # Keep the upper sheet clear so the drafted maths is not overwritten by the model's lines.
+        draw.rectangle((0, 0, SIZE, HAND_ROW - 1), fill=0)
     x, y = BULB_CENTER
-    ImageDraw.Draw(region).ellipse(
-        (x - GLOW_RADIUS, y - GLOW_RADIUS, x + GLOW_RADIUS, y + GLOW_RADIUS), fill=0
-    )
+    draw.ellipse((x - GLOW_RADIUS, y - GLOW_RADIUS, x + GLOW_RADIUS, y + GLOW_RADIUS), fill=0)
     return region
+
+
+def maths_note() -> list[list[tuple]]:
+    """Serious mathematics on the sheet, in the order she writes it.
+
+    An integral with its curve and the shaded area underneath, then a summation and a quotient.
+    Glyphs at this scale have to be plotted pixel by pixel; nothing smaller than this reads.
+    """
+    integral = [(2, 0), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (0, 5), (0, 6)]
+    sigma = [
+        (0, 0), (1, 0), (2, 0), (3, 0),
+        (2, 1), (1, 2), (2, 3),
+        (0, 4), (1, 4), (2, 4), (3, 4),
+    ]
+    curve = [
+        (26, 36), (27, 36), (28, 35), (29, 35), (30, 35), (31, 34), (32, 34), (33, 34),
+        (34, 33), (35, 33), (36, 33), (37, 32), (38, 32), (39, 32), (40, 31), (41, 31),
+        (42, 31), (43, 31),
+    ]
+    return [
+        [
+            ("line", 24, 31, 24, 37, DRAFT),
+            ("line", 24, 37, 46, 37, DRAFT),
+            ("glyph", integral, 24, 24, PENCIL),
+            ("ticks", [(27, 24), (27, 30)], PENCIL),
+        ],
+        [
+            ("ticks", curve, PENCIL),
+            ("hatch", curve, DRAFT),
+        ],
+        [
+            ("glyph", sigma, 30, 25, PENCIL),
+            ("ticks", [(36, 26), (37, 26), (36, 28), (37, 28)], PENCIL),
+            ("line", 39, 27, 45, 27, PENCIL),
+            ("ticks", [(40, 25), (41, 25), (42, 25), (40, 29), (41, 29), (42, 29), (43, 29)],
+             PENCIL),
+        ],
+    ]
+
+
+def draw_note(plate: Image.Image, stages: list[list[tuple]]) -> Image.Image:
+    image = plate.copy()
+    draw = ImageDraw.Draw(image)
+    for stage in stages:
+        for kind, *rest in stage:
+            if kind == "ticks":
+                points, color = rest
+                draw.point(points, fill=color)
+                continue
+            if kind == "glyph":
+                points, origin_x, origin_y, color = rest
+                draw.point([(origin_x + x, origin_y + y) for x, y in points], fill=color)
+                continue
+            if kind == "hatch":
+                points, color = rest
+                for x, y in points[1::3]:
+                    draw.line((x, y + 1, x, 36), fill=color)
+                continue
+            *coords, color = rest
+            if kind == "box":
+                draw.rectangle(coords, outline=color)
+            else:
+                draw.line(coords, fill=color)
+    return image
 
 
 def lamp_mask(glow: float = 1.0) -> Image.Image:
@@ -96,10 +170,20 @@ def dim(image: Image.Image, level: float, glow: float = 1.0) -> Image.Image:
 
 
 def helping(image: Image.Image, amount: float) -> Image.Image:
-    """Flick the bulb violet, so the lamp reads as helping while she draws."""
+    """Flick violet light around the bulb, so the lamp reads as helping while she draws.
+
+    Only the halo takes the tint. Blending the glass itself turns the amber core to mauve and the
+    lamp stops looking lit at all, which is the opposite of the intended beat.
+    """
+    halo = Image.new("L", (SIZE, SIZE))
+    draw = ImageDraw.Draw(halo)
+    x, y = BULB_CENTER
+    draw.ellipse((x - GLOW_RADIUS, y - GLOW_RADIUS, x + GLOW_RADIUS, y + GLOW_RADIUS),
+                 fill=round(255 * amount))
+    draw.ellipse((x - BULB_RADIUS - 1, y - BULB_RADIUS - 1, x + BULB_RADIUS + 1,
+                  y + BULB_RADIUS + 1), fill=0)
     violet = Image.new("RGB", (SIZE, SIZE), HELPER_VIOLET)
-    tinted = Image.blend(image, violet, amount)
-    return Image.composite(tinted, image, lamp_mask())
+    return Image.composite(ImageChops.screen(image, violet), image, halo)
 
 
 def zoom(crop_side: int) -> tuple[Image.Image, tuple[float, float], float]:
@@ -131,7 +215,8 @@ def shade_around(image: Image.Image, center: tuple[float, float], radius: float,
     mask = Image.new("L", (SIZE, SIZE))
     draw = ImageDraw.Draw(mask)
     x, y = center
-    draw.ellipse((x - radius * 1.5, y - radius * 1.5, x + radius * 1.5, y + radius * 1.5), fill=120)
+    draw.ellipse((x - radius * 1.25, y - radius * 1.25, x + radius * 1.25, y + radius * 1.25),
+                 fill=55)
     draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill=255)
     night = Image.new("RGB", (SIZE, SIZE), NIGHT)
     return Image.composite(image, Image.blend(night, image, level), mask)
@@ -169,9 +254,13 @@ def tint_glass(image: Image.Image, center: tuple[float, float], radius: float,
     return Image.composite(Image.blend(image, violet, amount), image, mask)
 
 
-def star_frame(radius: int, brightness: float) -> Image.Image:
-    """One four-point star, tapered, on a dark field."""
-    image = Image.new("RGB", (SIZE, SIZE), NIGHT)
+def star_field() -> Image.Image:
+    return Image.new("RGB", (SIZE, SIZE), NIGHT)
+
+
+def add_star(image: Image.Image, radius: int, brightness: float) -> Image.Image:
+    """Lay one four-point star, tapered, over whatever is already in the frame."""
+    image = image.copy()
     gradient = Image.new("RGB", (SIZE, SIZE))
     pixels = gradient.load()
     for y in range(SIZE):
@@ -200,29 +289,37 @@ def star_frame(radius: int, brightness: float) -> Image.Image:
 def build() -> list[Image.Image]:
     plate = frame(PLATE)
     region = paper_region()
-    steps = [Image.composite(frame(name), plate, region) for name in DRAWING_STEPS]
+    hands = [Image.composite(frame(name), plate, region) for name in DRAWING_STEPS]
+    if DRAWING_SOURCE == "model":
+        steps = hands
+    else:
+        stages = maths_note()
+        steps = [draw_note(hand, stages[: count + 1]) for count, hand in enumerate(hands)]
     finished = steps[-1]
 
     frames = [dim(plate, 0.10, glow=0.15), dim(plate, 0.45, glow=0.70), plate]
     for step in steps:
         frames.append(step)
-        frames.append(helping(step, 0.45))
+        frames.append(helping(step, 0.85))
     frames.append(finished)
     frames.append(dim(finished, 0.40))
     frames.append(dim(finished, 0.14))
 
-    for crop_side in (820, 620, 460, 330):
+    for crop_side, level in ((820, 0.06), (560, 0.04), (380, 0.03)):
         image, glass, radius = zoom(crop_side)
-        frames.append(shade_around(image, glass, radius * 1.3, 0.10))
+        frames.append(shade_around(image, glass, radius * 1.15, level))
 
     image, glass, radius = zoom(330)
-    lit = shade_around(image, glass, radius * 1.3, 0.06)
-    frames.append(argon_letters(lit, glass, radius, fade=0.55))
+    lit = shade_around(image, glass, radius * 1.1, 0.02)
+    frames.append(argon_letters(lit, glass, radius, fade=0.5))
     frames.append(argon_letters(lit, glass, radius))
-    frames.append(argon_letters(tint_glass(lit, glass, radius, 0.5), glass, radius, fade=0.7))
-    frames.append(tint_glass(lit, glass, radius, 0.9))
-
-    frames += [star_frame(16, 1.0), star_frame(25, 1.0), star_frame(27, 0.5)]
+    frames.append(argon_letters(lit, glass, radius))
+    violet = tint_glass(lit, glass, radius, 1.0)
+    frames.append(violet)
+    # The star breaks out of the glass that just held the argon, rather than cutting to a new shape.
+    frames.append(add_star(violet, 26, 1.0))
+    frames.append(add_star(star_field(), 26, 1.0))
+    frames.append(add_star(star_field(), 28, 0.45))
     frames.append(dim(plate, 0.08, glow=0.12))
     return frames
 
