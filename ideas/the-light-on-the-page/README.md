@@ -17,18 +17,18 @@ Argon is used inside incandescent bulbs to protect the filament. The glowing fil
 
 ## Color direction
 
-Use the Gemini 4 Argon artwork supplied as a color reference: deep navy (`#071233`), dark blue (`#123068`), clear blue (`#3B84E2`), pale cyan (`#BEEAFF`), and white. These are approximate samples from the artwork, not a formal brand palette.
+Use the Gemini 4 Argon artwork supplied as a color reference: deep navy (`#071233`), dark blue (`#123068`), clear blue (`#3B84E2`), pale cyan (`#BEEAFF`), and white. The supplied four-point Gemini star adds a brighter blue (`#3563F4`) to soft violet (`#9887F4`) gradient against near-black navy (`#040918`). These are approximate samples from the images, not a formal brand palette.
 
-The desk begins in those deep blues. The incandescent lamp adds a small amber pool over warm cream paper, preserving the cozy atmosphere and making the act of drawing the focal point. As the scene shifts to the model reveal, blue and white take over the frame. Keep large shapes and strong value contrast so the person, lamp, and drafting sheet read at 64×64 without zooming.
+The desk begins in deep blues. The incandescent lamp adds a small amber pool over warm cream paper, preserving the cozy atmosphere and making the act of drawing the focal point. As the scene shifts to the model reveal, the amber gives way to the star's blue-violet gradient. Keep large shapes and strong value contrast so the person, lamp, and drafting sheet read at 64×64 without zooming.
 
 ## Possible animation after approval
 
 1. Begin in near darkness. The lamp turns on and reveals the engineer, pencil, and mostly blank sheet: the starting scene described above.
 2. The hand moves with the pencil as a clear technical diagram grows on the paper. Use a few larger geometric marks rather than dense text so the act of drawing remains visible at 64×64.
 3. The desk and paper fade into navy shadow while the lamp keeps shining in the same position. A small pale-blue `Ar` appears inside the bulb as a graphic clue to the argon within it.
-4. The lamp's glow shifts into the reference artwork's blue range and leads into a brief, white `Gemini 4` title on a deep-blue field. The title disappears into darkness; the warm lamp switches on again over a fresh, mostly blank sheet to close the loop.
+4. The lamp's glow turns blue and resolves into one large four-point Gemini star on a dark field. Give its tapered points and blue-to-violet color enough space to read at 64×64. The star fades into darkness; the warm lamp switches on again over a fresh, mostly blank sheet to close the loop.
 
-Keep the camera fixed. The only words in the animation are the brief end reveal. Check `Ar` and `Gemini 4` at actual 64×64 size before committing to that treatment; if either cannot be read, simplify the reveal during the later animation stage. Animation, further frames, and a GIF require separate approval after review of the first still.
+Keep the camera fixed. `Ar` is the only lettering; the Gemini connection ends with the star instead of a title. Check the `Ar` detail and the star's silhouette at actual 64×64 size during the later animation stage. Animation, further frames, and a GIF require separate approval after review of the first still.
 
 ## First-frame review
 
