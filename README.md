@@ -36,7 +36,7 @@ The authentication step opens your Google account. Do it only after claiming the
 Each concept lives in its own `ideas/<name>/` folder. Its `README.md` describes the proposed image. After the user authorizes one first image, save its English prompt as `prompt.txt` in that folder. The tools keep source images, frames, review previews, and exports beside the idea:
 
 ```text
-ideas/bugs-ar-gone/
+ideas/the-light-on-the-page/
   README.md
   prompt.txt
   source/first.png
@@ -50,7 +50,7 @@ ideas/bugs-ar-gone/
 Generate exactly one square source image after permission:
 
 ```sh
-.venv/bin/python scripts/generate_image.py ideas/bugs-ar-gone
+.venv/bin/python scripts/generate_image.py ideas/the-light-on-the-page
 ```
 
 The default model is `gemini-nano-banana-2.1`. The script saves the exact prompt and model next to the source image. A revision uses a new name, for example `--name first-v2`, so the previous source remains available.
@@ -58,8 +58,8 @@ The default model is `gemini-nano-banana-2.1`. The script saves the exact prompt
 Turn the source into the actual 64×64 candidate and an 8× review copy:
 
 ```sh
-.venv/bin/python scripts/prepare_frame.py ideas/bugs-ar-gone first.png
-java -jar artwork-tool/target/artwork-tool-0.1.0-all.jar inspect ideas/bugs-ar-gone/frames/frame_001.png
+.venv/bin/python scripts/prepare_frame.py ideas/the-light-on-the-page first.png
+java -jar artwork-tool/target/artwork-tool-0.1.0-all.jar inspect ideas/the-light-on-the-page/frames/frame_001.png
 ```
 
 The frame tool center-crops to a square, raises contrast, reduces to a 32-color palette, and downsamples to 64×64. Use `--crop LEFT TOP RIGHT BOTTOM`, `--contrast`, and `--colors` to tune the result. It writes the exact settings and source SHA-256 in the frame's recipe file. The review copy is enlarged using nearest-neighbor scaling, so it shows the real pixels without smoothing. **Show both the 64×64 frame and its review copy to the user. Wait for approval before creating other images or a GIF.**
@@ -67,8 +67,8 @@ The frame tool center-crops to a square, raises contrast, reduces to a 32-color 
 Compose a looping GIF with Jixoo's encoder. The final argument is each frame's display time in milliseconds:
 
 ```sh
-java -jar artwork-tool/target/artwork-tool-0.1.0-all.jar compose ideas/bugs-ar-gone/frames ideas/bugs-ar-gone/final/entry.gif 100
-java -jar artwork-tool/target/artwork-tool-0.1.0-all.jar inspect ideas/bugs-ar-gone/final/entry.gif
+java -jar artwork-tool/target/artwork-tool-0.1.0-all.jar compose ideas/the-light-on-the-page/frames ideas/the-light-on-the-page/final/entry.gif 100
+java -jar artwork-tool/target/artwork-tool-0.1.0-all.jar inspect ideas/the-light-on-the-page/final/entry.gif
 ```
 
 The tool checks 64×64 dimensions, the contest's 5 MiB file limit, and a maximum of 30 frames. Jixoo's [animation recipes](https://github.com/glaforge/jixoo/blob/v0.3.0/RECIPES.md) warn that Pixoo hardware may loop after about 30–32 frames, so the 30-frame cap keeps the entire animation visible. Use a longer frame delay for a longer loop.
@@ -76,7 +76,7 @@ The tool checks 64×64 dimensions, the contest's 5 MiB file limit, and a maximum
 If a Pixoo 64 is available on the local network, display the export with Jixoo's CLI:
 
 ```sh
-java -jar vendor/jixoo/target/jixoo64-0.3.0-cli.jar -H <device-ip> gif --file ideas/bugs-ar-gone/final/entry.gif
+java -jar vendor/jixoo/target/jixoo64-0.3.0-cli.jar -H <device-ip> gif --file ideas/the-light-on-the-page/final/entry.gif
 ```
 
 The contest accepts up to three square visuals per submission, including PNG and GIF. It does not require exactly 64×64 pixels; we export at native resolution so every submitted pixel maps to one LED. Submission requires a Devoxx conference badge.
