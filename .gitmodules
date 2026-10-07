@@ -1,0 +1,3 @@
+[submodule "vendor/jixoo"]
+	path = vendor/jixoo
+	url = https://github.com/glaforge/jixoo.git
