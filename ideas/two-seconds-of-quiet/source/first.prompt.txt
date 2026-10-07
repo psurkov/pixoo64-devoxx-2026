@@ -1,0 +1,26 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/approved-room.png
+
+Use case: edit an approved 64x64 pixel-art game scene into a new, calmer version of the same room.
+
+Attached image: `approved-room.png`, the approved night desk scene. Keep the camera, the woman at
+the left in her burgundy sweater with her pencil on the cream sheet, the sleeping orange cat along
+the top edge, the deep blue night window with its building silhouettes and amber lit squares, the
+reddish-brown desk, the chair, the palette, and the same large square pixel blocks about one
+sixty-fourth of the image wide.
+
+Make two changes:
+
+1. Remove the glowing bulb lamp completely, along with its base and its halo. Nothing stands in its
+   place on the desk.
+2. Move the small coffee mug into the space the lamp has left, in the lower right of the desk, and
+   draw it larger there - about a sixth of the frame height, one of the first shapes noticed. It is
+   a simple ceramic mug with a clear handle and dark coffee inside, warm cream against the darker
+   wood. Leave clear empty space above the mug, with nothing drawn in it.
+
+The warm light now comes from somewhere off the frame, so keep the amber pool of light on the paper
+and let the mug carry the brightest warm highlight in the room. Keep the room dark and nocturnal,
+and keep every shape separated by lightness so each one still reads at 64x64.
+
+No lamp, no bulb, no glow, no steam, no text, no letters, no logo, no star, no new objects, no extra
+detail, no anti-aliased edges, no watermark.

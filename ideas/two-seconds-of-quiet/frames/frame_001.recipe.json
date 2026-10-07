@@ -1,0 +1,19 @@
+{
+  "source": "source/first.png",
+  "source_sha256": "7f781bac41780a5282c02c83042ffc815e2411eadafcf1fabd9e0abba1c11bde",
+  "crop": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "flatten": 0.55,
+  "sharpen": 0.3,
+  "saturation": 1.05,
+  "contrast": 1.1,
+  "colors": 64,
+  "downsample": "mode",
+  "working_colors": 48,
+  "quantization": "median_cut_without_dithering",
+  "preview_scale": 8
+}

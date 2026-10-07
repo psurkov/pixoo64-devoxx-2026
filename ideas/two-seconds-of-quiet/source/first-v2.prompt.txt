@@ -1,0 +1,28 @@
+Model: gemini-nano-banana-2.1
+Edit source: source/first.png
+
+Use case: revise an approved 64x64 pixel-art game scene.
+
+Attached image: `first.png`, the current scene. Keep the camera, the woman at the left in her
+burgundy sweater, the sleeping orange cat along the top edge, the deep blue night window with its
+building silhouettes and amber lit squares, the reddish-brown desk, the chair, the palette, the
+warm pool of light, and the same large square pixel blocks about one sixty-fourth of the image
+wide.
+
+Make two changes:
+
+1. She is reading, not writing. Replace the loose cream sheet with an open book lying flat on the
+   desk in the same place: two warm cream pages of equal size with one dark line down the middle
+   where they meet, and a dark cover edge visible around them. Remove the pencil completely. Her
+   near hand rests quietly on the lower corner of the page instead of holding anything. Keep her
+   head lowered toward the book.
+2. Make the drink unmistakably coffee. The mug stays in the lower right at the same size: a sturdy
+   straight-sided ceramic mug with a thick handle, filled to the top with dark brown coffee that
+   has a clear pale rim of ceramic around it. Not a teacup, not a glass, no saucer, no tea bag, no
+   string, no tag.
+
+Leave clear empty space above the mug with nothing drawn in it. Keep the room dark and nocturnal
+and keep every shape separated by lightness so each one still reads at 64x64.
+
+No writing or marks on the pages, no lamp, no bulb, no glow, no steam, no text, no letters, no
+logo, no star, no new objects, no extra detail, no anti-aliased edges, no watermark.
