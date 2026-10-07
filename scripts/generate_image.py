@@ -13,7 +13,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("prompt_file", type=Path)
     parser.add_argument("output", type=Path)
-    parser.add_argument("--model", default="gemini-3.1-flash-lite-image")
+    parser.add_argument("--model", default="gemini-nano-banana-2.1")
     args = parser.parse_args()
 
     prompt = args.prompt_file.read_text(encoding="utf-8")

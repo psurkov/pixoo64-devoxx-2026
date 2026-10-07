@@ -41,7 +41,7 @@ Generate a square source PNG from a saved prompt:
 .venv/bin/python scripts/generate_image.py prompts/entry.txt artwork/source/entry.png
 ```
 
-The default model is `gemini-3.1-flash-lite-image` (Nano Banana 2 light). The source PNG then needs deliberate 64×64 pixel editing before it becomes a final frame.
+The default model is `gemini-nano-banana-2.1`. Review and approve the first static image before generating more images or animation, as described in `AGENTS.md`. The source PNG then needs deliberate 64×64 pixel editing before it becomes a final frame.
 
 Compose a looping GIF with Jixoo's encoder. The final argument is each frame's display time in milliseconds:
 
